@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Citas de Servicio | Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="topbar">
+        <div>
+          <h1>Dashboard</h1>
+          <div class="small" id="welcome"></div>
+        </div>
+        <button class="btn secondary" id="logoutBtn">Salir</button>
+      </div>
+
+      <div class="card">
+        <h2 id="formTitle">Nueva cita</h2>
+        <p class="small">Crea o edita una reserva de servicio.</p>
+
+        <form id="apptForm">
+          <input type="hidden" id="apptId" />
+
+          <label for="service">Servicio</label>
+          <input
+            id="service"
+            type="text"
+            required
+            placeholder="Ej. Verificación vehicular"
+          />
+
+          <div class="row">
+            <div>
+              <label for="date">Fecha y hora</label>
+              <input id="date" type="datetime-local" required />
+            </div>
+
+            <div>
+              <label for="status">Estatus</label>
+              <select id="status">
+                <option value="pendiente">pendiente</option>
+                <option value="confirmada">confirmada</option>
+                <option value="cancelada">cancelada</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="notes">Notas</label>
+          <textarea id="notes" placeholder="Detalles (opcional)"></textarea>
+
+          <div style="display: flex; gap: 10px; margin-top: 12px">
+            <button class="btn" type="submit" id="saveBtn">Guardar</button>
+            <button class="btn secondary" type="button" id="clearBtn">
+              Limpiar
+            </button>
+          </div>
+
+          <div id="alert" class="alert" style="display: none"></div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Mis citas</h2>
+        <p class="small">Lista de reservas asociadas a tu cuenta.</p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Servicio</th>
+              <th>Fecha</th>
+              <th>Estatus</th>
+              <th>Notas</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="apptTable"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

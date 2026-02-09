@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  margin: 0;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 18px;
+  margin-top: 18px;
+}
+
+h1,
+h2 {
+  margin: 0 0 12px;
+}
+label {
+  display: block;
+  margin: 10px 0 6px;
+  color: #cbd5e1;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #0b1220;
+  color: #e2e8f0;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 700px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.btn {
+  background: #38bdf8;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn.secondary {
+  background: #64748b;
+}
+.btn.danger {
+  background: #ef4444;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid #334155;
+}
+.badge.pendiente {
+  color: #fbbf24;
+  border-color: #fbbf24;
+}
+.badge.confirmada {
+  color: #22c55e;
+  border-color: #22c55e;
+}
+.badge.cancelada {
+  color: #f87171;
+  border-color: #f87171;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.table th,
+.table td {
+  border-bottom: 1px solid #1f2937;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.alert {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #0b1220;
+}
+.alert.ok {
+  border-color: #22c55e;
+  color: #bbf7d0;
+}
+.alert.err {
+  border-color: #ef4444;
+  color: #fecaca;
+}
+.small {
+  color: #94a3b8;
+  font-size: 12px;
+}
