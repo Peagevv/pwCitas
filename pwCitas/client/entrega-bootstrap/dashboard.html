@@ -1,0 +1,141 @@
+<!-- Pantalla 3: Dashboard + Layout Responsive | Bootstrap -->
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reservas de Servicio | Dashboard</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand brand-chip" href="#">Citas de Servicio</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMain"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reservas.html">Reservas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reserva-form.html">Nueva reserva</a>
+            </li>
+          </ul>
+          <a class="btn btn-outline-secondary btn-sm" href="login.html"
+            >Salir</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-12 col-lg-3 col-xl-2 p-3">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body">
+              <div class="small text-secondary">Usuario</div>
+              <div class="fw-semibold mb-3">mel@test.com</div>
+
+              <div class="list-group">
+                <a
+                  class="list-group-item list-group-item-action active"
+                  href="dashboard.html"
+                  >Dashboard</a
+                >
+                <a
+                  class="list-group-item list-group-item-action"
+                  href="reservas.html"
+                  >Mis reservas</a
+                >
+                <a
+                  class="list-group-item list-group-item-action"
+                  href="reserva-form.html"
+                  >Crear reserva</a
+                >
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <main class="col-12 col-lg-9 col-xl-10 p-3">
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2 mb-3"
+          >
+            <div>
+              <h1 class="h4 mb-1">Dashboard</h1>
+              <div class="text-secondary">
+                Resumen rápido (solo maquetación).
+              </div>
+            </div>
+            <a class="btn btn-primary" href="reserva-form.html"
+              >+ Nueva reserva</a
+            >
+          </div>
+
+          <div class="row g-3 mb-3">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <div class="text-secondary small">Reservas hoy</div>
+                  <div class="display-6 fw-semibold mb-0">3</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <div class="text-secondary small">Pendientes</div>
+                  <div class="display-6 fw-semibold mb-0">5</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <div class="text-secondary small">Confirmadas</div>
+                  <div class="display-6 fw-semibold mb-0">8</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-0 shadow-sm">
+            <div class="card-body">
+              <h2 class="h6 mb-2">Accesos rápidos</h2>
+              <div class="d-flex flex-column flex-sm-row gap-2">
+                <a class="btn btn-outline-primary" href="reservas.html"
+                  >Ver tabla de reservas</a
+                >
+                <a class="btn btn-outline-secondary" href="reserva-form.html"
+                  >Abrir formulario</a
+                >
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
